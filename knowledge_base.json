@@ -1,0 +1,130 @@
+{
+  "entries": [
+    {
+      "id": "general_info",
+      "category": "general_info",
+      "title": "Što je HAOD",
+      "keywords": ["haod", "agencija", "što je", "čime se bavite"],
+      "approved_answer": "HAOD je Hrvatska agencija za osiguranje depozita. Najjednostavnije: mi smo ona tiha pozadina koja brine da tvoj novac u banci ne nestane preko noći ako se banci dogodi nešto loše. Kad banka 'padne', ne ostaješ sam s naslovima na portalima – postoji sustav koji pokreće isplatu osiguranog dijela tvoje štednje."
+    },
+    {
+      "id": "limit_explanation",
+      "category": "limit_explanation",
+      "title": "Limit od 100.000 eura",
+      "keywords": ["100.000", "limit", "po osobi", "po banci"],
+      "approved_answer": "Limit od 100.000 eura po osobi po banci je broj koji ti daje okvir sigurnosti. Za svaku banku posebno, tvoj ukupan novac (tekući, žiro, štednja…) može biti zaštićen do 100.000 eura. Ako se dogodi najgori scenarij i banka propadne, sustav osiguranja depozita isplaćuje ti najviše 100.000 eura u toj banci. Drugim riječima: u svakoj banci imaš do 100.000 razloga za mirniji san."
+    },
+    {
+      "id": "bank_failure",
+      "category": "coverage",
+      "title": "Propast banke - hoću li izgubiti sve",
+      "keywords": ["propadne", "izgubiti", "ostao bez svega"],
+      "approved_answer": "Ne, to je upravo situacija za koju sustav osiguranja depozita postoji. Ako banka propadne, pokreće se postupak u kojem se tvoj osigurani dio – do 100.000 eura u toj banci – isplaćuje kroz jasno definiranu proceduru. HAOD tada objavi gdje, kada i kako možeš doći do svog novca. Možda zvuči dramatično kad vidiš naslov, ali iza kulisa postoji mehanizam koji radi upravo za taj scenarij."
+    },
+    {
+      "id": "multiple_banks",
+      "category": "coverage",
+      "title": "Više banaka - kako se računa",
+      "keywords": ["dvije banke", "više banaka", "svaka banka posebno"],
+      "approved_answer": "Dobra vijest: svaka se banka gleda odvojeno. Ako imaš novac u Banci A i Banci B, limit od 100.000 eura vrijedi za svaku od njih posebno. To znači da možeš imati osigurano do 100.000 eura u jednoj banci i do 100.000 eura u drugoj. Ne zbraja ti se sve na jednu hrpu – svaka banka je svoj 'košarica' u kojoj imaš svoj limit."
+    },
+    {
+      "id": "joint_accounts",
+      "category": "joint_accounts",
+      "title": "Zajednički računi",
+      "keywords": ["zajednički", "suprug", "supruga", "dvoje"],
+      "approved_answer": "Zajednički račun u pravilu se dijeli na više vlasnika. Ako ste, primjerice, vas dvoje na zajedničkom računu i imate 200.000 eura, taj se iznos obično gleda kao 100.000 eura po osobi - dakle oboje unutar limita. Ključna ideja: limit se primjenjuje po osobi, a ne po računu. Za detalje oko točne raspodjele uvijek se možeš dodatno provjeriti i s bankom."
+    },
+    {
+      "id": "foreign_currency",
+      "category": "foreign_currency",
+      "title": "Devizna i oročena štednja",
+      "keywords": ["devizna", "oročena", "valuta"],
+      "approved_answer": "Da, i devizni računi i oročena štednja mogu biti osigurani, ako spadaju u kategoriju osiguranih depozita prema zakonu. Kad se gleda limit, sve se preračuna u eure prema tečaju na dan kad se dogodi problem s bankom. Ako mi kažeš: 'imam deviznu štednju i oročenje u banci', mogu ti pojasniti kako se to u pravilu uklapa u okvir osiguranja."
+    },
+    {
+      "id": "account_types",
+      "category": "account_types",
+      "title": "Vrste računa - što je pokriveno",
+      "keywords": ["tekući", "žiro", "štedni", "razlika"],
+      "approved_answer": "Za sustav osiguranja najvažnije je: držiš li novac kao depozit u banci. U pravilu su pokriveni klasični računi na kojima držiš novac kod banke – tekući, žiro, štedni i oročeni depoziti, ako su otvoreni na tvoje ime u banci koja je u našem sustavu. Ono što obično nije pokriveno su razne vrste ulaganja (fondovi, dionice, obveznice…). Ako kažeš: 'imam tekući i štednju u banci', to se u pravilu gleda kao dio onih 100.000 eura po banci."
+    },
+    {
+      "id": "non_coverage",
+      "category": "non_coverage",
+      "title": "Što nije pokriveno",
+      "keywords": ["nije pokriveno", "ulaganja", "fondovi", "dionice"],
+      "approved_answer": "Osiguranje depozita štiti novac na bankovnim računima i štednji, ali ne i sve ostalo što banka ili drugi nude. Najčešće nisu pokriveni: udjeli u investicijskim fondovima, dionice, obveznice i slična ulaganja. To su proizvodi s drugačijim rizikom i pravilima. Ako imaš nešto što zvuči više kao 'ulaganje' nego kao račun u banci, velika je šansa da to ne spada u osigurane depozite."
+    },
+    {
+      "id": "eu_banks",
+      "category": "eu_banks",
+      "title": "Banke iz drugih EU država",
+      "keywords": ["eu", "druga država", "inozemna"],
+      "approved_answer": "Ako imaš novac u banci čije je sjedište u drugoj državi članici EU, onda tvoj novac štiti sustav osiguranja depozita te države. Pravila su u EU usklađena – svaka zemlja ima svoj 'HAOD'. Za tu štednju ćeš najbolje informacije dobiti od te banke ili njihove agencije za osiguranje depozita. Ja ti ovdje mogu objasniti princip kako to funkcionira, ali ne upravljam njihovim sustavom."
+    },
+    {
+      "id": "payout_timing",
+      "category": "payout_timing",
+      "title": "Rokovi isplate",
+      "keywords": ["koliko dugo", "čekati", "rok", "isplata"],
+      "approved_answer": "Rokovi su propisani zakonom i cilj je da do svog osiguranog novca dođeš u razumnom, kratkom roku, a ne da mjesecima živiš u neizvjesnosti. Ako se dogodi problem s nekom bankom, HAOD službeno objavljuje rokove i upute: od kojeg dana kreću isplate, na kojim mjestima i na koji način. Drugim riječima, u takvoj situaciji ne moraš sve sam istraživati – informacije idu od nas prema tebi, kroz službene kanale."
+    },
+    {
+      "id": "limit_calc",
+      "category": "limit_calc",
+      "title": "Izračun pokrivenosti",
+      "keywords": ["imam", "izračunaj", "koliko", "osigurano"],
+      "approved_answer": "Mogu ti pomoći s okvirnim izračunom koliko bi tvoje štednje bilo pokriveno sustavom osiguranja depozita. Limit od 100.000 eura se primjenjuje po osobi po banci. Ako imaš novac u više banaka, svaka banka se gleda odvojeno. Ovo je informativna simulacija - za potpuno precizne informacije uvijek se možeš dodatno obratiti svojoj banci ili HAOD-u."
+    },
+    {
+      "id": "panic_news",
+      "category": "panic",
+      "title": "Vijesti o problemima banke",
+      "keywords": ["vijesti", "problemi", "trčati", "odmah"],
+      "approved_answer": "Razumijem da takve vijesti zvuče jako neugodno, to je normalna reakcija. Prvo je važno znati ovo: postoji sustav osiguranja depozita koji štiti tvoj novac do 100.000 eura po osobi po banci. Drugo, kod ovakvih vijesti najvažnije je pratiti službene obavijesti – od banke, od HAOD-a i od nadležnih institucija, a ne komentare ispod članaka. Ja ti mogu objasniti što se događa u različitim scenarijima i koliko je tvoj novac zaštićen. Ali odluku što ćeš napraviti s novcem donosiš ti, eventualno uz savjet svoje banke ili stručnog savjetnika."
+    },
+    {
+      "id": "panic_withdrawal",
+      "category": "panic",
+      "title": "Svi dižu novac",
+      "keywords": ["svi dižu", "panično", "isto napraviti"],
+      "approved_answer": "Kad ljudi počnu panično dizati novac, to dodatno stvara pritisak i nervozu – čak i ako sustav radi svoj posao. Ono što ti ja mogu dati su činjenične informacije: koliko sustav osiguranja depozita štiti tvoj novac (do 100.000 eura po banci), što se događa u slučaju propasti banke, koja su tvoja prava ako do toga dođe. Ne mogu ti reći 'podigni' ili 'ne podigni' – to je financijska odluka. Mogu ti pomoći da je doneseš smirenije, s više informacija, a ne samo na temelju panike."
+    },
+    {
+      "id": "panic_over_limit",
+      "category": "panic",
+      "title": "Više od 100.000 eura u jednoj banci",
+      "keywords": ["više od", "iznad limita", "propasti"],
+      "approved_answer": "Limit od 100.000 eura ti govori do kojeg iznosa sustav osiguranja depozita sigurno 'pokriva' tvoj novac u jednoj banci. Sve iznad tog iznosa nije u okviru tog sustava. To ne znači automatski da će sve iznad toga propasti ako se bilo što loše dogodi. Ali znači da za dio iznad 100.000 eura sustav osiguranja depozita nije mehanizam zaštite. Ako želiš, mogu ti na tvom primjeru okvirno izračunati koliki dio tvoje štednje bi bio unutar sustava osiguranja, a koliki iznad - pa s tim podacima možeš dalje razgovarati s bankom ili savjetnikom."
+    },
+    {
+      "id": "panic_no_official",
+      "category": "panic",
+      "title": "Vijesti bez službenih obavijesti",
+      "keywords": ["nema još službenih", "službenih obavijesti", "svi pričaju", "čekati ili", "čekati", "reagirati", "navečer"],
+      "approved_answer": "Razumijem nelagodu kad je 'pola priče' u medijima, a službene informacije još nisu stigle. U ovakvim situacijama važno je znati: sustav osiguranja depozita postoji neovisno o vijestima - on je stalno 'u pozadini'. Ključni koraci (npr. isplata osiguranih depozita) pokreću se tek kad nadležna tijela službeno utvrde problem (npr. stečaj, likvidacija). Ja ti u međuvremenu mogu objasniti kako izgleda procedura ako do toga dođe i koliko si zaštićen. Za bilo kakvu konkretnu akciju uvijek je najbolje pričekati službenu informaciju od banke i HAOD-a, a ne reagirati samo na prve napise."
+    },
+    {
+      "id": "payout_guarantee",
+      "category": "coverage",
+      "title": "Hoće li 100.000 stvarno biti isplaćeno",
+      "keywords": ["stvarno", "isplaćeno", "siguran"],
+      "approved_answer": "Limit od 100.000 eura nije marketinška poruka, nego zakonski i europski standard osiguranja depozita. HAOD i banke uplaćuju sredstva u fond osiguranja upravo za takve situacije. Kad se dogodi propast banke, pokreće se jasno propisan postupak isplate osiguranih depozita. To nije ad-hoc odluka 'hoćemo ili nećemo nekome isplatiti', nego obveza definirana propisima. Ako želiš, mogu ti detaljnije objasniti kako izgleda taj proces – korak po korak – da vidiš što se točno radi u praksi."
+    },
+    {
+      "id": "financial_advice_restricted",
+      "category": "financial_advice_restricted",
+      "title": "Odbijanje financijskog savjeta",
+      "keywords": ["trebam li", "savjet", "preporučuješ"],
+      "approved_answer": "Kao digitalni asistent HAOD-a, ne dajem financijske savjete - to mi zakon ne dopušta i nije moja uloga. Mogu ti objasniti kako sustav osiguranja depozita funkcionira, koliko je tvoj novac zaštićen, i koja su tvoja prava. Za financijske odluke i savjete o tome što raditi s novcem, obrati se svojoj banci, ovlaštenom financijskom savjetniku ili drugom stručnjaku."
+    },
+    {
+      "id": "bank_stability_restricted",
+      "category": "bank_stability_restricted",
+      "title": "Odbijanje procjene stabilnosti banke",
+      "keywords": ["sigurna banka", "hoće li propasti", "stabilna"],
+      "approved_answer": "Kao digitalni asistent HAOD-a, ja ne procjenjujem stabilnost pojedinih banaka i ne dajem prognoze tipa 'ova banka je sigurna / nesigurna'. Mogu ti pomoći ovako: objasnim ti kako sustav osiguranja depozita funkcionira za bilo koju banku koja je u njemu, pokažem ti koliko bi tvoj novac bio zaštićen u različitim scenarijima, uputim te na službene izvore informacija. Za komentiranje pojedinih banaka i investicijske odluke uvijek je bolje razgovarati s bankom, regulatorom ili neovisnim stručnjakom - moj zadatak je da ti objasnim pravila, ne da predviđam budućnost."
+    }
+  ]
+}

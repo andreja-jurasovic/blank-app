@@ -47,7 +47,10 @@ def classify_intent(text: str) -> str:
         system_instruction=CLASSIFIER_SYSTEM_PROMPT,
     )
 
-    response = model.generate_content(text)
+    response = model.generate_content(
+        text,
+        request_options={"timeout": 15},
+    )
 
     # Check if response was blocked
     if not response.candidates or not response.candidates[0].content.parts:
@@ -97,7 +100,10 @@ def format_answer(question: str, approved_answer: str, calculation_result: str =
         calculation_result=calculation_result if calculation_result else "",
     )
 
-    response = model.generate_content(prompt)
+    response = model.generate_content(
+        prompt,
+        request_options={"timeout": 20},
+    )
     return response.text.strip()
 
 

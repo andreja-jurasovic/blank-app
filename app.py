@@ -89,17 +89,9 @@ def process_question(question: str, use_llm: bool = True) -> ProcessingResult:
         calculation = calculate_full(question)
         calc_text = calculation.format_result()
 
-        if use_llm and LLM_AVAILABLE:
-            try:
-                response = format_answer(
-                    question=question,
-                    approved_answer=approved_answer,
-                    calculation_result=calc_text
-                )
-            except Exception:
-                response = f"{approved_answer}\n\n**Izračun:**\n{calc_text}"
-        else:
-            response = f"{approved_answer}\n\n**Izračun:**\n{calc_text}"
+        # Never send calculation results through the LLM - it gets confused by math.
+        # The calculator already formats results correctly.
+        response = f"{approved_answer}\n\n**Izračun:**\n{calc_text}"
 
     else:
         if use_llm and LLM_AVAILABLE:

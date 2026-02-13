@@ -91,6 +91,22 @@ def has_specific_amounts(text: str) -> bool:
     return bool(re.search(amount_pattern, text))
 
 
+def count_amounts(text: str) -> int:
+    """Count how many monetary amounts appear in text."""
+    return len(re.findall(r'\d{2,3}[.,]\d{3}', text))
+
+
+def has_bank_mentions(text: str) -> bool:
+    """Check if text mentions banks (indicating a deposit scenario)."""
+    bank_patterns = [
+        "banci", "banka", "banke", "banku", "bankom", "banaka",
+        "prvoj", "drugoj", "trećoj",
+        "jednoj", "dvije", "tri",
+    ]
+    text_lower = text.lower()
+    return any(p in text_lower for p in bank_patterns)
+
+
 def classify_rules(text: str) -> Tuple[str, float]:
     """
     Rule-based intent classification using pattern matching.
@@ -117,6 +133,13 @@ def classify_rules(text: str) -> Tuple[str, float]:
         if matches > 0:
             category_scores[category] = (matches, confidence, best_pattern)
 
+    # Auto-detect calculations: amounts + bank mentions = calculation, even without patterns
+    # Exclude explanation questions (asking what the limit means, not calculating their deposits)
+    explanation_phrases = ["što znači", "sto znaci", "što to znači", "što to točno znači", "po osobi po banci"]
+    is_explanation = any(p in text_lower for p in explanation_phrases)
+    if has_specific_amounts(text_lower) and has_bank_mentions(text_lower) and not is_explanation:
+        return "limit_calc", 0.95
+
     if not category_scores:
         return "general_info", 0.4
 
@@ -134,7 +157,7 @@ def classify_rules(text: str) -> Tuple[str, float]:
                 best_category = category
                 best_confidence = confidence
 
-    # Special handling for calculations with amounts
+    # Additional calc detection for pattern-matched cases
     if "limit_calc" in category_scores and has_specific_amounts(text_lower):
         _, calc_conf, _ = category_scores["limit_calc"]
         asking_calculation = any(q in text_lower for q in [

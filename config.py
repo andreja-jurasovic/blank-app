@@ -163,6 +163,20 @@ RULE_PATTERNS = {
         "koju štednju",
         "koju banku",
         "kako da postupim",
+        # Moving/transferring money questions
+        "mogu li premjestiti",
+        "mogu li prebaciti",
+        "da li da premjestim",
+        "da li da prebacim",
+        "premjestiti novac",
+        "prebaciti novac",
+        "premjestiti u jednu",
+        "prebaciti u jednu",
+        "staviti sve u jednu",
+        "držati sve u jednoj",
+        "drzati sve u jednoj",
+        "rasporediti novac",
+        "raspodijeliti novac",
         # Note: "trebam li" is context-dependent - handled specially in classifier
     ],
 

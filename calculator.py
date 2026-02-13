@@ -10,6 +10,20 @@ from dataclasses import dataclass
 from config import DEPOSIT_LIMIT
 
 
+def normalize_amounts(text: str) -> str:
+    """
+    Normalize shorthand amount formats to plain numbers.
+    Handles: 100k, 200K, 100 k, 1.5k, etc.
+    """
+    # "100k" / "200K" / "100 k" → multiply by 1000
+    def replace_k(match):
+        num = match.group(1).replace(",", ".").strip()
+        return str(int(float(num) * 1000))
+
+    text = re.sub(r'(\d+(?:[.,]\d+)?)\s*[kK]\b', replace_k, text)
+    return text
+
+
 @dataclass
 class BankDeposit:
     """Represents a deposit in a single bank."""
@@ -172,6 +186,7 @@ def parse_multi_bank_amounts(text: str) -> List[Tuple[str, float]]:
     Returns:
         List of (bank_name, amount) tuples
     """
+    text = normalize_amounts(text)
     text_lower = text.lower()
 
     # First, extract all amounts with their positions

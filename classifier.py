@@ -86,9 +86,17 @@ def calculate_match_score(text: str, patterns: List[str]) -> Tuple[int, float, s
 
 
 def has_specific_amounts(text: str) -> bool:
-    """Check if text contains specific monetary amounts."""
-    amount_pattern = r'\d{2,3}[.,]\d{3}'
-    return bool(re.search(amount_pattern, text))
+    """Check if text contains specific monetary amounts, including 'k' shorthand."""
+    # Standard formats: 80.000, 80,000, 80000
+    if re.search(r'\d{2,3}[.,]\d{3}', text):
+        return True
+    # Shorthand: 100k, 200K, 50 k
+    if re.search(r'\d+\s*[kK]\b', text):
+        return True
+    # Plain large numbers: 80000+
+    if re.search(r'\d{5,}', text):
+        return True
+    return False
 
 
 def count_amounts(text: str) -> int:

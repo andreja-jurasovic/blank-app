@@ -212,7 +212,7 @@ def guardrail_check(text: str) -> str:
     return text
 
 
-def validate_response_length(text: str, max_length: int = 2000) -> str:
+def validate_response_length(text: str, max_length: int = 5000) -> str:
     """
     Ensure response isn't too long.
 

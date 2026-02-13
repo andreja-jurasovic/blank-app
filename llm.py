@@ -89,7 +89,6 @@ def format_answer(question: str, approved_answer: str, calculation_result: str =
         model_name=MODEL_NAME,
         generation_config=genai.GenerationConfig(
             temperature=FORMATTER_TEMPERATURE,
-            max_output_tokens=2000,
         ),
         system_instruction=FORMATTER_SYSTEM_PROMPT,
     )

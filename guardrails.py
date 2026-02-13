@@ -212,18 +212,19 @@ def guardrail_check(text: str) -> str:
     return text
 
 
-def validate_response_length(text: str, max_length: int = 5000) -> str:
+def validate_response_length(text: str, max_length: int = 0) -> str:
     """
     Ensure response isn't too long.
+    Set max_length=0 to disable truncation.
 
     Args:
         text: Response text
-        max_length: Maximum allowed characters
+        max_length: Maximum allowed characters (0 = no limit)
 
     Returns:
         Truncated text if too long, with ellipsis
     """
-    if len(text) > max_length:
+    if max_length > 0 and len(text) > max_length:
         truncated = text[:max_length]
         last_period = truncated.rfind(".")
         if last_period > max_length * 0.7:

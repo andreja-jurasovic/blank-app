@@ -59,9 +59,10 @@ class CalculationResult:
 
         lines.append("")
         lines.append("**Ukupno:**")
+        lines.append(f"- Ukupni depoziti: {self.total_amount:,.0f} €")
         lines.append(f"- Osigurano: {self.total_insured:,.0f} €")
         if self.total_excess > 0:
-            lines.append(f"- Iznad limita: {self.total_excess:,.0f} €")
+            lines.append(f"- Neosigurano (iznad limita): {self.total_excess:,.0f} €")
 
         return "\n".join(lines)
 

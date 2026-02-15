@@ -208,7 +208,7 @@ def main():
         st.divider()
         llm_status = "🟢 LLM Aktivan" if LLM_AVAILABLE else "🟡 Demo Mode"
         st.markdown(f"**Status:** {llm_status}")
-        st.caption("Debug info se ispisuje u terminal.")
+        st.markdown("[HAOD.hr](https://www.haod.hr/) | Tel: +385 (1) 48 13 222")
 
 
 if __name__ == "__main__":

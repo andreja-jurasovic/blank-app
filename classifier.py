@@ -31,7 +31,9 @@ CATEGORY_PRIORITY = [
     "coverage",
     "non_coverage",
     "limit_explanation",
+    "human_agent",
     "general_info",
+    "off_topic",
 ]
 
 
@@ -56,7 +58,7 @@ def classify_with_llm(text: str) -> Tuple[str, float]:
         for cat in CATEGORIES:
             if cat in category or category in cat:
                 return cat, 0.85
-        return "general_info", 0.70
+        return "off_topic", 0.70
     except Exception as e:
         print(f"[CLASSIFIER] LLM error: {e}")
         raise
@@ -142,14 +144,28 @@ def classify_rules(text: str) -> Tuple[str, float]:
             category_scores[category] = (matches, confidence, best_pattern)
 
     # Auto-detect calculations: amounts + bank mentions = calculation, even without patterns
-    # Exclude explanation questions (asking what the limit means, not calculating their deposits)
+    # But only if no higher-priority category (panic, coverage, etc.) already matched
     explanation_phrases = ["što znači", "sto znaci", "što to znači", "što to točno znači", "po osobi po banci"]
     is_explanation = any(p in text_lower for p in explanation_phrases)
-    if has_specific_amounts(text_lower) and has_bank_mentions(text_lower) and not is_explanation:
+    higher_priority_matched = any(
+        cat in category_scores for cat in ["panic", "coverage", "bank_stability_restricted", "payout_timing", "joint_accounts"]
+    )
+    if (has_specific_amounts(text_lower) and has_bank_mentions(text_lower)
+            and not is_explanation and not higher_priority_matched):
         return "limit_calc", 0.95
 
     if not category_scores:
-        return "general_info", 0.4
+        # Check if the question contains deposit/banking keywords despite no pattern match
+        # If so, it's likely an on-topic question phrased in an unexpected way
+        on_topic_keywords = [
+            "osiguran", "depozit", "banka", "banke", "banci", "banku",
+            "štednja", "stednja", "novac", "novce", "novca",
+            "haod", "račun", "racun", "isplat", "limit",
+            "100.000", "sto tisuća", "pokrive", "zaštić", "zastic",
+        ]
+        if any(kw in text_lower for kw in on_topic_keywords):
+            return "general_info", 0.4
+        return "off_topic", 0.90
 
     # Find best category by priority
     best_category: str = "general_info"
@@ -174,6 +190,13 @@ def classify_rules(text: str) -> Tuple[str, float]:
         if asking_calculation and calc_conf >= 0.7:
             best_category = "limit_calc"
             best_confidence = min(calc_conf + 0.1, 0.95)
+
+    # Joint accounts override limit_calc when both match
+    if best_category == "limit_calc" and "joint_accounts" in category_scores:
+        _, joint_conf, _ = category_scores["joint_accounts"]
+        if joint_conf >= 0.7:
+            best_category = "joint_accounts"
+            best_confidence = joint_conf
 
     # Bank stability always wins if matched
     if "bank_stability_restricted" in category_scores:
@@ -207,7 +230,7 @@ def classify(text: str) -> Tuple[str, float]:
 
     # If rules have medium confidence (70-90%), still skip LLM for restricted categories
     # (These are critical and rules patterns are reliable for them)
-    if rules_confidence >= 0.70 and rules_category in ["bank_stability_restricted", "financial_advice_restricted"]:
+    if rules_confidence >= 0.70 and rules_category in ["bank_stability_restricted", "financial_advice_restricted", "off_topic"]:
         print(f"[CLASSIFIER] Restricted category detected by rules, skipping LLM")
         return rules_category, rules_confidence
 

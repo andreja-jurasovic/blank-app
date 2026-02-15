@@ -125,6 +125,20 @@
       "title": "Odbijanje procjene stabilnosti banke",
       "keywords": ["sigurna banka", "hoće li propasti", "stabilna"],
       "approved_answer": "Kao digitalni asistent HAOD-a, ja ne procjenjujem stabilnost pojedinih banaka i ne dajem prognoze tipa 'ova banka je sigurna / nesigurna'. Mogu ti pomoći ovako: objasnim ti kako sustav osiguranja depozita funkcionira za bilo koju banku koja je u njemu, pokažem ti koliko bi tvoj novac bio zaštićen u različitim scenarijima, uputim te na službene izvore informacija. Za komentiranje pojedinih banaka i investicijske odluke uvijek je bolje razgovarati s bankom, regulatorom ili neovisnim stručnjakom - moj zadatak je da ti objasnim pravila, ne da predviđam budućnost."
+    },
+    {
+      "id": "human_agent",
+      "category": "human_agent",
+      "title": "Kontakt s pravom osobom",
+      "keywords": ["razgovarati", "osoba", "kontakt", "telefon", "email", "web"],
+      "approved_answer": "Naravno! Ako želiš razgovarati s pravom osobom ili saznati više, možeš kontaktirati HAOD izravno:\n\n- Web: https://www.haod.hr/\n- Telefon: +385 (1) 48 13 222\n\nKolege u HAOD-u rado će ti pomoći s bilo kakvim pitanjima o osiguranju depozita. Ja sam tu za brze informacije, ali za složenije situacije uvijek se možeš obratiti ljudskom timu."
+    },
+    {
+      "id": "off_topic",
+      "category": "off_topic",
+      "title": "Pitanje izvan domene",
+      "keywords": [],
+      "approved_answer": "To nije moje područje – ja sam Miran, digitalni asistent HAOD-a (Hrvatske agencije za osiguranje depozita). Mogu ti pomoći s pitanjima o osiguranju depozita, zaštiti tvog novca u banci, limitima pokrivenosti, postupcima isplate i sličnim temama. Ako te zanima nešto iz tog područja, slobodno pitaj!"
     }
   ]
 }

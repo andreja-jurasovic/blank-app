@@ -411,6 +411,13 @@ RULE_PATTERNS = {
         "mogu li nazvati",
         "razgovarati s osobom",
         "razgovarati s nekim",
+        "ljudski agent",
+        "ljudskim agentom",
+        "s agentom",
+        "agentom",
+        "s osobom",
+        "prava osoba",
+        "pravu osobu",
     ],
 
     # GENERAL INFO - about HAOD

@@ -33,6 +33,7 @@ CATEGORY_PRIORITY = [
     "limit_explanation",
     "human_agent",
     "general_info",
+    "greeting",
     "off_topic",
 ]
 
@@ -153,6 +154,10 @@ def classify_rules(text: str) -> Tuple[str, float]:
     if (has_specific_amounts(text_lower) and has_bank_mentions(text_lower)
             and not is_explanation and not higher_priority_matched):
         return "limit_calc", 0.95
+
+    # Greeting only wins if it's the ONLY category matched (pure greeting, no real question)
+    if "greeting" in category_scores and len(category_scores) > 1:
+        del category_scores["greeting"]
 
     if not category_scores:
         # Check if the question contains deposit/banking keywords despite no pattern match

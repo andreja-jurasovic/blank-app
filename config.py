@@ -43,6 +43,7 @@ CATEGORIES = [
     "financial_advice_restricted",
     "bank_stability_restricted",
     "human_agent",
+    "greeting",
     "off_topic",
 ]
 
@@ -50,6 +51,7 @@ CATEGORIES = [
 RESTRICTED_CATEGORIES = [
     "financial_advice_restricted",
     "bank_stability_restricted",
+    "greeting",
     "off_topic",
 ]
 
@@ -62,9 +64,9 @@ CALCULATOR_CATEGORIES = [
 CLASSIFIER_SYSTEM_PROMPT = """Classify deposit insurance query. Reply with ONE category name only.
 
 Categories:
-general_info|limit_explanation|coverage|non_coverage|joint_accounts|foreign_currency|account_types|eu_banks|payout_timing|limit_calc|panic|financial_advice_restricted|bank_stability_restricted|human_agent|off_topic
+general_info|limit_explanation|coverage|non_coverage|joint_accounts|foreign_currency|account_types|eu_banks|payout_timing|limit_calc|panic|financial_advice_restricted|bank_stability_restricted|human_agent|greeting|off_topic
 
-coverage=bank fails/lose money, payout_timing=when get money, limit_calc=specific amounts, panic=news worried, financial_advice_restricted=asking advice, bank_stability_restricted=is bank X safe, human_agent=wants to talk to real person/contact info/phone/email, off_topic=NOT about deposit insurance/banks/HAOD at all (politics, weather, sports, general knowledge, etc.)"""
+coverage=bank fails/lose money, payout_timing=when get money, limit_calc=specific amounts, panic=news worried, financial_advice_restricted=asking advice, bank_stability_restricted=is bank X safe, human_agent=wants to talk to real person/contact info/phone/email, greeting=hi/hello/hey/bok/pozdrav, off_topic=NOT about deposit insurance/banks/HAOD at all (politics, weather, sports, general knowledge, etc.)"""
 
 # System prompt for answer formatting (Miran persona)
 FORMATTER_SYSTEM_PROMPT = """Ti si "Miran", digitalni asistent Hrvatske agencije za osiguranje depozita (HAOD).
@@ -418,6 +420,23 @@ RULE_PATTERNS = {
         "s osobom",
         "prava osoba",
         "pravu osobu",
+    ],
+
+    # GREETING - user says hello
+    "greeting": [
+        "bok",
+        "hej",
+        "hey",
+        "pozdrav",
+        "ćao",
+        "cao",
+        "dobar dan",
+        "dobro jutro",
+        "dobra večer",
+        "dobra vecer",
+        "hello",
+        "hi",
+        "zdravo",
     ],
 
     # GENERAL INFO - about HAOD

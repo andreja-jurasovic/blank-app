@@ -134,6 +134,13 @@
       "approved_answer": "Naravno! Ako želiš razgovarati s pravom osobom ili saznati više, možeš kontaktirati HAOD izravno:\n\n- Web: https://www.haod.hr/\n- Telefon: +385 (1) 48 13 222\n\nKolege u HAOD-u rado će ti pomoći s bilo kakvim pitanjima o osiguranju depozita. Ja sam tu za brze informacije, ali za složenije situacije uvijek se možeš obratiti ljudskom timu."
     },
     {
+      "id": "greeting",
+      "category": "greeting",
+      "title": "Pozdrav",
+      "keywords": ["bok", "hej", "pozdrav", "zdravo", "dobar dan"],
+      "approved_answer": "Bok! Ja sam Miran, tvoj digitalni asistent za osiguranje depozita. Kako ti mogu pomoći danas?"
+    },
+    {
       "id": "off_topic",
       "category": "off_topic",
       "title": "Pitanje izvan domene",

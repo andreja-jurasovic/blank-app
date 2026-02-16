@@ -33,7 +33,7 @@
       "category": "joint_accounts",
       "title": "Zajednički računi",
       "keywords": ["zajednički", "suprug", "supruga", "dvoje"],
-      "approved_answer": "Zajednički račun u pravilu se dijeli na više vlasnika. Ako ste, primjerice, vas dvoje na zajedničkom računu i imate 200.000 eura, taj se iznos obično gleda kao 100.000 eura po osobi - dakle oboje unutar limita. Ključna ideja: limit se primjenjuje po osobi, a ne po računu. Za detalje oko točne raspodjele uvijek se možeš dodatno provjeriti i s bankom."
+      "approved_answer": "Kod zajedničkog računa ključno je ovo: limit osiguranja depozita se primjenjuje po osobi, ne po računu. To znači da se ukupan iznos na zajedničkom računu dijeli na svakog vlasnika, i svaki vlasnik ima svoj limit od 100.000 eura. Konkretno: ako vas dvoje imate 120.000 eura na zajedničkom računu, to se gleda kao 60.000 eura po osobi – i oboje ste potpuno unutar limita. Cijeli iznos od 120.000 eura je u tom slučaju pokriven sustavom osiguranja depozita. Čak i da imate 200.000 eura na zajedničkom računu, to je 100.000 eura po osobi – opet oboje unutar limita. Za točne detalje raspodjele uvijek se možeš dodatno provjeriti s bankom ili HAOD-om."
     },
     {
       "id": "foreign_currency",

@@ -238,6 +238,15 @@ RULE_PATTERNS = {
         # Bank trouble indicators
         "banka u problemima",
         "moja banka u problemima",
+        "u financijskim problemima",
+        "financijskim problemima",
+        "u problemima",
+        "zabrinuti",
+        "trebao zabrinuti",
+        "trebala zabrinuti",
+        "čuo sam da",
+        "cuo sam da",
+        "čuo da",
         "trčati po novac",
         "odmah trčati",
         # Crowd behavior

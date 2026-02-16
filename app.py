@@ -8,6 +8,8 @@ import streamlit as st
 from dataclasses import dataclass
 from typing import Optional
 import os
+import time
+import random
 from datetime import datetime
 
 from classifier import classify
@@ -168,12 +170,23 @@ def main():
     for idx, (emoji_label, question) in enumerate(EXAMPLE_QUESTIONS):
         with cols[idx % 3]:
             if st.button(emoji_label, key=f"ex_{idx}", use_container_width=True):
-                # Add to messages and process
                 st.session_state.messages.append({"role": "user", "content": question})
+                st.session_state["_pending_question"] = question
+                st.rerun()
+
+    # Process pending FAQ question with spinner
+    if "_pending_question" in st.session_state:
+        question = st.session_state.pop("_pending_question")
+        with st.chat_message("user"):
+            st.markdown(question)
+        with st.chat_message("assistant"):
+            with st.spinner("Razmišljam..."):
                 result = process_question(question, use_llm=LLM_AVAILABLE)
                 log_debug(question, result, "llm" if LLM_AVAILABLE else "rules")
-                st.session_state.messages.append({"role": "assistant", "content": result.response})
-                st.rerun()
+                time.sleep(random.uniform(1.0, 2.0))
+            st.markdown(result.response)
+        st.session_state.messages.append({"role": "assistant", "content": result.response})
+        st.rerun()
 
     st.divider()
 
